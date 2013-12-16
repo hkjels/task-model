@@ -1,0 +1,18 @@
+{
+  "name": "task-model",
+  "repo": "hkjels/task-model",
+  "description": "Task-model compatible with `scrumcard-view`",
+  "version": "0.0.1",
+  "keywords": ["task", "scrum"],
+  "dependencies": {
+    "hkjels/is-fibonacci": "*",
+    "LearnBoost/gravatar-component": "1.0.6"
+  },
+  "development": {
+    "component/assert": "*",
+    "visionmedia/mocha": "*"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": ["index.js"]
+}
