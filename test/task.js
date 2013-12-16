@@ -14,7 +14,7 @@ describe('Task model', function () {
       "email": "hkjels@me.com",
       "priority": "medium",
       "estimate": 3,
-      "status": "todo"
+      "state": "todo"
     });
   });
 

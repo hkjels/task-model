@@ -24,9 +24,9 @@ function isPriority(str) {
  * @param {String} str
  */
 
-function isStatus(str) {
-  var statuses = ['todo', 'progress', 'done'];
-  return statuses.indexOf(str) != -1;
+function isState(str) {
+  var states = ['todo', 'progress', 'done'];
+  return states.indexOf(str) != -1;
 }
 
 /**
@@ -40,14 +40,14 @@ var Task = model('Task')
   .attr('email', { type: 'string' })
   .attr('priority', { type: 'string', validate: isPriority })
   .attr('estimate', { type: 'number', min: 0, max: 13, validate: isFibonacci })
-  .attr('status', { type: 'string', validate: isStatus });
+  .attr('state', { type: 'string', validate: isState });
 
 /**
  * Assignee photo.
  */
 
 Task.prototype.photo = function() {
-  var url = gravatar.url(this.email(), {
+  var url = gravatar.url(this.email() || "", {
     "d": "retro",
     "r": "g"
   });
