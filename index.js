@@ -4,7 +4,7 @@
  */
 
 var model = require('model')
-  , gravatar = require('gravatar-component')
+  , gravatar = require('gravatar')
   , isFibonacci = require('is-fibonacci');
 
 /**
@@ -35,10 +35,11 @@ var Task = model('Task')
  */
 
 Task.prototype.photo = function() {
-  return gravatar.url(this.email, {
+  var url = gravatar.url(this.email(), {
     "d": "retro",
     "r": "g"
   });
+  return url;
 };
 
 /**
