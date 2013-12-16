@@ -2,7 +2,7 @@
   "name": "task-model",
   "repo": "hkjels/task-model",
   "description": "Task-model compatible with `scrumcard-view`",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "keywords": ["task", "scrum"],
   "dependencies": {
     "component/model": "0.1.1",

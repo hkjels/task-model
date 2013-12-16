@@ -15,7 +15,18 @@ var model = require('model')
 
 function isPriority(str) {
   var priorities = ['very-low', 'low', 'medium', 'high', 'very-high'];
-  return priorities.indexOf(str);
+  return priorities.indexOf(str) != -1;
+}
+
+/**
+ * Check if string is a status-string.
+ *
+ * @param {String} str
+ */
+
+function isStatus(str) {
+  var statuses = ['todo', 'progress', 'done'];
+  return statuses.indexOf(str) != -1;
 }
 
 /**
@@ -28,7 +39,8 @@ var Task = model('Task')
   .attr('assignee', { type: 'string' })
   .attr('email', { type: 'string' })
   .attr('priority', { type: 'string', validate: isPriority })
-  .attr('estimate', { type: 'number', min: 0, max: 13, validate: isFibonacci });
+  .attr('estimate', { type: 'number', min: 0, max: 13, validate: isFibonacci })
+  .attr('status', { type: 'string', validate: isStatus });
 
 /**
  * Assignee photo.

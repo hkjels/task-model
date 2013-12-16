@@ -13,7 +13,8 @@ describe('Task model', function () {
       "assignee": "Henrik Kjelsberg",
       "email": "hkjels@me.com",
       "priority": "medium",
-      "estimate": 3
+      "estimate": 3,
+      "status": "todo"
     });
   });
 
